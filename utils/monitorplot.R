@@ -1,5 +1,7 @@
 # Copyright (C) 2018 Aki Vehtari, Paul Bürkner
 library(bayesplot)
+library(grid)
+library(gridExtra)
 
 plot_ranknorm <- function(theta, n, m = 1, interval = FALSE) {
   df <- data.frame(theta = theta) %>%

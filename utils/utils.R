@@ -1,19 +1,22 @@
 # NOTE: You need to install Stan, JAGS and INLA to run these functions properly
-
 library(INLA) # necessary for calculation of scaling factor 
-
 library(MASS) # necessary to simulate from multivariate normal 
-
-# necessary for handling shapefiles and various spatial data tools
-library(sf) 
-library(spdep)
-
+library(sf) # necessary for handling shapefiles and various spatial data tools
+library(spdep) # necessary for handling shapefiles and various spatial data tools
 library(geodist) # necessary for calculation of distance between coordiates 
-
 library(ape) # contains Moran I calculator
+library(SpatialEpi) # to get maps 
+library(R2jags) # requires JAGS to simulate conditionally autoregressive data 
+library(parallel)
+library(rstan) # need stan to fit model 
+
+# Rstan Options
+rstan_options(auto_write = TRUE)
+options(mc.cores = parallel::detectCores())
 # Calculate Moran's  I with bootleg function, over the simulated residuals
 # (row-normalized weight matrix) John L. Gittleman, Mark Kot,
 # Adaptation: Statistics and a Null Model for Estimating Phylogenetic Effects
+
 Moran.I.bootleg = function(x,W){ 
   N <- dim(W)[1];
   x.bar <- mean(x);
@@ -25,17 +28,6 @@ Moran.I.bootleg = function(x,W){
   I = num/denom;
   return(I)
 }
-
-library(SpatialEpi) # to get maps 
-library(R2jags) # requires JAGS to simulate conditionally autoregressive data 
-
-library(parallel)
-library(rstan) # need stan to fit model 
-# Rstan Options
-rstan_options(auto_write = TRUE)
-options(mc.cores = parallel::detectCores())
-
-
 
 # utils
 inv_logit = function(x){exp(x)/(1+exp(x))}

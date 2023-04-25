@@ -1,15 +1,11 @@
-rm(list=ls())
 gc()
 options(scipen=999)
-setwd(dir = "~/Desktop/analysis_final/")
-
 #libraries
 library(data.table)
 library(dplyr)
 
 # Load utility functions
 source("utils/utils.R")
-
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # # DEFINE TESTING GROUND # # # # # # # # # # # # # # # # # # # # # # # # # # # #

@@ -1,7 +1,5 @@
-# rm(list=ls())
 gc()
 options(scipen=999)
-# setwd(dir = "~/Desktop/analysis/")
 
 #libraries
 library(data.table)
