@@ -106,7 +106,7 @@ For full descriptions of each variable and how they were coded, see the Appendix
 Here's a markdown table with two columns, one for the variable name, and one for a description of the variable:
 
 | Variable name            | Description                                                                     |
-|--------------------|----------------------------------------------------|
+|----------------------|-------------------------------------------------|
 | country                  | name of the country where the individual lives                                  |
 | governorate              | name of the governorate where the individual lives                              |
 | delegation               | name of the delegation where the individual lives                               |
@@ -159,6 +159,15 @@ Here's a markdown table with two columns, one for the variable name, and one for
 
 ## File structure
 
+### Analysis scripts
+
+-   ├── 000_simulation_study_round1.R : Runs first set of simulations
+-   ├── 000_simulation_study_round2.R : Runs second set of simulations
+-   ├── 01_analysis_egypt.R : "Worm's Eye" model estimation for Egypt
+-   ├── 02_analysis_tunisia.R : "Worm's Eye" model estimation for Tunisia
+-   ├── 03a_cleaning_bird.R : "Bird's Eye" model estimation data preparation
+-   ├── 03b_analysis_bird.R: "Bird's Eye" model estimation
+
 ```         
 
 ├── 000_simulation_study_round1.R
@@ -187,7 +196,7 @@ Here's a markdown table with two columns, one for the variable name, and one for
 │   ├── Egypt
 │   ├── Sims
 │   └── Tunisia
-├── shapefiles
+├── shapefiles/
 ├── tables
 │   ├── profiles_bird.tex
 │   ├── profiles_egy.tex

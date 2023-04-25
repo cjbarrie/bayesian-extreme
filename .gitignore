@@ -2,7 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-*data/
-shapefiles
+*generated_data/
 *.DS_Store
 plots/
