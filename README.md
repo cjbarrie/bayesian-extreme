@@ -155,7 +155,41 @@ Here's a markdown table with two columns, one for the variable name, and one for
 ## Computational requirements
 
 -   Software used for final replication:
+
+```         
+platform       aarch64-apple-darwin20      
+arch           aarch64                     
+os             darwin20                    
+system         aarch64, darwin20           
+status                                     
+major          4                           
+minor          2.3                         
+year           2023                        
+month          03                          
+day            15                          
+svn rev        83980                       
+language       R                           
+version.string R version 4.2.3 (2023-03-15)
+nickname       Shortstop Beagle     
+```
+
 -   Hardware used for final replication:
+
+```         
+      Model Name: MacBook Pro
+      Model Identifier: MacBookPro18,3
+      Model Number: Z15G0026LB/A
+      Chip: Apple M1 Pro
+      Total Number of Cores: 8 (6 performance and 2 efficiency)
+      Memory: 32 GB
+      System Firmware Version: 8419.80.7
+      OS Loader Version: 8419.80.7
+      Serial Number (system): C3YH39D4FF
+      Hardware UUID: FA2D6AD0-E4D6-54E5-95DF-F4BC76BDA020
+      Provisioning UDID: 00006000-001C41020A29801E
+      Activation Lock Status: Enabled
+```
+
 -   Processing time for final analysis:
     -   000_simulation_study_round1.R : \~12 hours
     -   000_simulation_study_round2.R : \~12 hours
