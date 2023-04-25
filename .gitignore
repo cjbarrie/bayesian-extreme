@@ -5,4 +5,5 @@
 *data/
 shapefiles
 *.DS_Store
-plots/.DS_Store
+plots/
+plots/
