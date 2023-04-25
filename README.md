@@ -4,6 +4,12 @@
 
 Repo of replication materials for "Explaining Recruitment to Extremism: A Bayesian Hierarchical Case-Control Approach." This is the final version control repository without data output (too large for Github). For full replication dataverse, see: <INSERT HARVARD DATAVERSE URL>.
 
+## Package installation
+
+<img src="hex.png" align="right" width="80"/>
+
+The estimation procedure described in this article is provided as a standalone package called `extremeR`: <https://github.com/cjbarrie/extremeR>. The package has a standalone website, including tutorial run-through at: <https://extremer.info/>.
+
 ## Description of data
 
 We use three main sources of data. These are all in the folder "data/".
@@ -19,7 +25,7 @@ For full descriptions of each variable and how they were coded, see the Appendix
 #### master_data.csv
 
 | Variable Name   | Description                                                                     |
-|-------------------------------------|-----------------------------------|
+|-----------------|---------------------------------------------------------------------------------|
 | person_ID       | unique identifier for each individual                                           |
 | country         | name of the country where the individual lives                                  |
 | name_0          | alternative country ID                                                          |
@@ -44,7 +50,7 @@ For full descriptions of each variable and how they were coded, see the Appendix
 #### matchdata_isisall.csv.csv
 
 | Variable Name   | Description                                                                     |
-|----------------------------------------|--------------------------------|
+|-----------------|---------------------------------------------------------------------------------|
 | ID              | unique identifier for each individual                                           |
 | country         | name of the country where the individual lives                                  |
 | governorate     | name of the governorate where the individual lives                              |
@@ -63,7 +69,7 @@ For full descriptions of each variable and how they were coded, see the Appendix
 ### matchdata_isisegysc.csv
 
 | Variable Name                  | Description                                                                          |
-|---------------------------------------------|---------------------------|
+|--------------------------------|--------------------------------------------------------------------------------------|
 | country                        | name of the country where the individual lives                                       |
 | governorate                    | name of the governorate where the individual lives                                   |
 | district                       | name of the district where the individual lives                                      |
@@ -106,7 +112,7 @@ For full descriptions of each variable and how they were coded, see the Appendix
 Here's a markdown table with two columns, one for the variable name, and one for a description of the variable:
 
 | Variable name            | Description                                                                     |
-|----------------------|-------------------------------------------------|
+|--------------------------|---------------------------------------------------------------------------------|
 | country                  | name of the country where the individual lives                                  |
 | governorate              | name of the governorate where the individual lives                              |
 | delegation               | name of the delegation where the individual lives                               |
