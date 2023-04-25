@@ -1,14 +1,18 @@
 # NOTE: You need to install Stan, JAGS and INLA to run these functions properly
-library(INLA) # necessary for calculation of scaling factor 
-library(MASS) # necessary to simulate from multivariate normal 
-library(sf) # necessary for handling shapefiles and various spatial data tools
-library(spdep) # necessary for handling shapefiles and various spatial data tools
-library(geodist) # necessary for calculation of distance between coordiates 
-library(ape) # contains Moran I calculator
-library(SpatialEpi) # to get maps 
-library(R2jags) # requires JAGS to simulate conditionally autoregressive data 
-library(parallel)
-library(rstan) # need stan to fit model 
+# Define the list of libraries to install
+libs <- c("INLA", "MASS", "sf", "spdep", "geodist", "ape", 
+          "SpatialEpi", "R2jags", "parallel", "rstan")
+
+# Check if each library is already installed
+# If not, install it
+for (lib in libs) {
+  if (!requireNamespace(lib, quietly = TRUE)) {
+    install.packages(lib)
+    library(lib, character.only = TRUE)
+  } else {
+    library(lib, character.only = TRUE)
+  }
+}
 
 # Rstan Options
 rstan_options(auto_write = TRUE)

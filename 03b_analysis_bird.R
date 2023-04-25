@@ -2,9 +2,15 @@ gc()
 options(scipen=999)
 
 #libraries
-library(data.table)
-library(dplyr)
-library(xtable)
+libs <- c("data.table", "dplyr", "xtable")
+for (lib in libs) {
+  if (!requireNamespace(lib, quietly = TRUE)) {
+    install.packages(lib)
+    library(lib, character.only = TRUE)
+  } else {
+    library(lib, character.only = TRUE)
+  }
+}
 
 # Load utility functions
 source("utils/utils.R")

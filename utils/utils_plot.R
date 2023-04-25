@@ -1,14 +1,18 @@
 # load some useful functions for analysis of convergence and fit 
 source('utils/monitorplot.R') # https://github.com/avehtari/rhat_ess/blob/master/code/monitorplot.R
 source('utils/monitornew.R') # https://github.com/avehtari/rhat_ess/blob/master/code/monitornew.R
-library(ggplot2)
-library(grid)
-require(gridExtra)
-library(mgcv)
-library(caret)
-library(RColorBrewer)
-library(modeest)
-library(stringr)
+libs <- c("ggplot2", "grid", "gridExtra", "mgcv", "caret", "RColorBrewer", "modeest", "stringr")
+# Check if each library is already installed
+# If not, install it
+for (lib in libs) {
+  if (!requireNamespace(lib, quietly = TRUE)) {
+    install.packages(lib)
+    library(lib, character.only = TRUE)
+  } else {
+    library(lib, character.only = TRUE)
+  }
+}
+
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # # # # # # # # # CONVERGENCE PLOTS # # # # # # # # # 

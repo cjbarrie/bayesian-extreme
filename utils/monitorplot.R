@@ -1,7 +1,13 @@
 # Copyright (C) 2018 Aki Vehtari, Paul Bürkner
-library(bayesplot)
-library(grid)
-library(gridExtra)
+libs <- c("bayesplot", "grid", "gridExtra")
+for (lib in libs) {
+  if (!requireNamespace(lib, quietly = TRUE)) {
+    install.packages(lib)
+    library(lib, character.only = TRUE)
+  } else {
+    library(lib, character.only = TRUE)
+  }
+}
 
 plot_ranknorm <- function(theta, n, m = 1, interval = FALSE) {
   df <- data.frame(theta = theta) %>%
