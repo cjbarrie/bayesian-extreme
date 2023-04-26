@@ -3,15 +3,15 @@ output:
   pdf_document: default
   html_document: default
 ---
-# bayesian-extreme
+# README for: Explaining Recruitment to Extremism: A Bayesian Hierarchical Case-Control Approach
 
 ![](margins.png)
 
-Repo of replication materials for "Explaining Recruitment to Extremism: A Bayesian Hierarchical Case-Control Approach." This is the final version control repository without data output (too large for Github). For full replication dataverse, see: <INSERT HARVARD DATAVERSE URL>.
+Repo of replication materials for "Explaining Recruitment to Extremism: A Bayesian Hierarchical Case-Control Approach."
+
+**Note that point estimates in these replication materials differ very slightly from the published estimates. This is due to minor differences in posterior samples as a result of MCMC sampling procedures.**
 
 ## Package installation
-
-<img src="hex.png" align="right" width="80"/>
 
 The estimation procedure described in this article is provided as a standalone package called `extremeR`: <https://github.com/cjbarrie/extremeR>. The package has a standalone website, including tutorial run-through at: <https://extremer.info/>.
 
